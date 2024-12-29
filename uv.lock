@@ -1,22 +1,13 @@
 version = 1
-requires-python = ">=3.8"
-resolution-markers = [
-    "python_full_version >= '3.9'",
-    "python_full_version < '3.9'",
-]
+requires-python = ">=3.12"
 
 [[package]]
 name = "anyio"
 version = "4.5.2"
 source = { registry = "https://pypi.org/simple" }
-resolution-markers = [
-    "python_full_version < '3.9'",
-]
 dependencies = [
-    { name = "exceptiongroup", marker = "python_full_version < '3.9'" },
-    { name = "idna", marker = "python_full_version < '3.9'" },
-    { name = "sniffio", marker = "python_full_version < '3.9'" },
-    { name = "typing-extensions", marker = "python_full_version < '3.9'" },
+    { name = "idna" },
+    { name = "sniffio" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/4d/f9/9a7ce600ebe7804daf90d4d48b1c0510a4561ddce43a596be46676f82343/anyio-4.5.2.tar.gz", hash = "sha256:23009af4ed04ce05991845451e11ef02fc7c5ed29179ac9a420e5ad0ac7ddc5b", size = 171293 }
 wheels = [
@@ -24,30 +15,33 @@ wheels = [
 ]
 
 [[package]]
-name = "anyio"
-version = "4.7.0"
+name = "click"
+version = "8.1.8"
 source = { registry = "https://pypi.org/simple" }
-resolution-markers = [
-    "python_full_version >= '3.9'",
-]
 dependencies = [
-    { name = "exceptiongroup", marker = "python_full_version >= '3.9' and python_full_version < '3.11'" },
-    { name = "idna", marker = "python_full_version >= '3.9'" },
-    { name = "sniffio", marker = "python_full_version >= '3.9'" },
-    { name = "typing-extensions", marker = "python_full_version >= '3.9' and python_full_version < '3.13'" },
+    { name = "colorama", marker = "sys_platform == 'win32'" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/f6/40/318e58f669b1a9e00f5c4453910682e2d9dd594334539c7b7817dabb765f/anyio-4.7.0.tar.gz", hash = "sha256:2f834749c602966b7d456a7567cafcb309f96482b5081d14ac93ccd457f9dd48", size = 177076 }
+sdist = { url = "https://files.pythonhosted.org/packages/b9/2e/0090cbf739cee7d23781ad4b89a9894a41538e4fcf4c31dcdd705b78eb8b/click-8.1.8.tar.gz", hash = "sha256:ed53c9d8990d83c2a27deae68e4ee337473f6330c040a31d4225c9574d16096a", size = 226593 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/a0/7a/4daaf3b6c08ad7ceffea4634ec206faeff697526421c20f07628c7372156/anyio-4.7.0-py3-none-any.whl", hash = "sha256:ea60c3723ab42ba6fff7e8ccb0488c898ec538ff4df1f1d5e642c3601d07e352", size = 93052 },
+    { url = "https://files.pythonhosted.org/packages/7e/d4/7ebdbd03970677812aac39c869717059dbb71a4cfc033ca6e5221787892c/click-8.1.8-py3-none-any.whl", hash = "sha256:63c132bbbed01578a06712a2d1f497bb62d9c1c0d329b7903a866228027263b2", size = 98188 },
 ]
 
 [[package]]
-name = "exceptiongroup"
-version = "1.2.2"
+name = "colorama"
+version = "0.4.6"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/09/35/2495c4ac46b980e4ca1f6ad6db102322ef3ad2410b79fdde159a4b0f3b92/exceptiongroup-1.2.2.tar.gz", hash = "sha256:47c2edf7c6738fafb49fd34290706d1a1a2f4d1c6df275526b62cbb4aa5393cc", size = 28883 }
+sdist = { url = "https://files.pythonhosted.org/packages/d8/53/6f443c9a4a8358a93a6792e2acffb9d9d5cb0a5cfd8802644b7b1c9a02e4/colorama-0.4.6.tar.gz", hash = "sha256:08695f5cb7ed6e0531a20572697297273c47b8cae5a63ffc6d6ed5c201be6e44", size = 27697 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/02/cc/b7e31358aac6ed1ef2bb790a9746ac2c69bcb3c8588b41616914eb106eaf/exceptiongroup-1.2.2-py3-none-any.whl", hash = "sha256:3111b9d131c238bec2f8f516e123e14ba243563fb135d3fe885990585aa7795b", size = 16453 },
+    { url = "https://files.pythonhosted.org/packages/d1/d6/3965ed04c63042e047cb6a3e6ed1a63a35087b6a609aa3a15ed8ac56c221/colorama-0.4.6-py2.py3-none-any.whl", hash = "sha256:4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6", size = 25335 },
+]
+
+[[package]]
+name = "h11"
+version = "0.14.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/f5/38/3af3d3633a34a3316095b39c8e8fb4853a28a536e55d347bd8d8e9a14b03/h11-0.14.0.tar.gz", hash = "sha256:8f19fbbe99e72420ff35c00b27a34cb9937e902a8b810e2c88300c6f0a3b699d", size = 100418 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/95/04/ff642e65ad6b90db43e668d70ffb6736436c7ce41fcc549f4e9472234127/h11-0.14.0-py3-none-any.whl", hash = "sha256:e3fe4ac4b851c468cc8363d500db52c2ead036020723024a109d37346efaa761", size = 58259 },
 ]
 
 [[package]]
@@ -64,12 +58,15 @@ name = "python-web-app"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
-    { name = "starlette", version = "0.44.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.9'" },
-    { name = "starlette", version = "0.45.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.9'" },
+    { name = "starlette" },
+    { name = "uvicorn" },
 ]
 
 [package.metadata]
-requires-dist = [{ name = "starlette", specifier = ">=0.44.0" }]
+requires-dist = [
+    { name = "starlette", specifier = ">=0.44.0" },
+    { name = "uvicorn", specifier = ">=0.33.0" },
+]
 
 [[package]]
 name = "sniffio"
@@ -84,12 +81,8 @@ wheels = [
 name = "starlette"
 version = "0.44.0"
 source = { registry = "https://pypi.org/simple" }
-resolution-markers = [
-    "python_full_version < '3.9'",
-]
 dependencies = [
-    { name = "anyio", version = "4.5.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.9'" },
-    { name = "typing-extensions", marker = "python_full_version < '3.9'" },
+    { name = "anyio" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/8d/b4/910f693584958b687b8f9c628f8217cfef19a42b64d2de7840814937365c/starlette-0.44.0.tar.gz", hash = "sha256:e35166950a3ccccc701962fe0711db0bc14f2ecd37c6f9fe5e3eae0cbaea8715", size = 2575579 }
 wheels = [
@@ -97,26 +90,14 @@ wheels = [
 ]
 
 [[package]]
-name = "starlette"
-version = "0.45.0"
+name = "uvicorn"
+version = "0.33.0"
 source = { registry = "https://pypi.org/simple" }
-resolution-markers = [
-    "python_full_version >= '3.9'",
-]
 dependencies = [
-    { name = "anyio", version = "4.7.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.9'" },
-    { name = "typing-extensions", marker = "python_full_version == '3.9.*'" },
+    { name = "click" },
+    { name = "h11" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/e9/dc/9b3204e7bdc7c2b7589b604259b32b6b1dcc28faa2f51969d4968510845d/starlette-0.45.0.tar.gz", hash = "sha256:ca7ee855c243a058a2f24bc832b8072bade47fbc2672ce4b98de66c7f6c924f0", size = 2574214 }
+sdist = { url = "https://files.pythonhosted.org/packages/cb/81/a083ae41716b00df56d45d4b5f6ca8e90fc233a62e6c04ab3ad3c476b6c4/uvicorn-0.33.0.tar.gz", hash = "sha256:3577119f82b7091cf4d3d4177bfda0bae4723ed92ab1439e8d779de880c9cc59", size = 76590 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/71/33/648fb0d0990650377a2fbcbc4e5cf760012cdc5ba35c471abbe6f3dc15e8/starlette-0.45.0-py3-none-any.whl", hash = "sha256:c911ba0e86eed5b336931623f45e56a8c6d76c618f2749d9f5ed9ee55a5bf1bb", size = 71795 },
-]
-
-[[package]]
-name = "typing-extensions"
-version = "4.12.2"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/df/db/f35a00659bc03fec321ba8bce9420de607a1d37f8342eee1863174c69557/typing_extensions-4.12.2.tar.gz", hash = "sha256:1a7ead55c7e559dd4dee8856e3a88b41225abfe1ce8df57b7c13915fe121ffb8", size = 85321 }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/26/9f/ad63fc0248c5379346306f8668cda6e2e2e9c95e01216d2b8ffd9ff037d0/typing_extensions-4.12.2-py3-none-any.whl", hash = "sha256:04e5ca0351e0f3f85c6853954072df659d0d13fac324d0072316b67d7794700d", size = 37438 },
+    { url = "https://files.pythonhosted.org/packages/98/79/2e2620337ef1e4ef7a058b351603b765f59ac28e6e3ac7c5e7cdee9ea1ab/uvicorn-0.33.0-py3-none-any.whl", hash = "sha256:2c30de4aeea83661a520abab179b24084a0019c0c1bbe137e5409f741cbde5f8", size = 62297 },
 ]
